@@ -63,3 +63,9 @@ typings/
 
 
 # End of https://www.gitignore.io/api/node
+
+# IntelliJ artifacts
+.idea/
+*.iml
+*.iws
+transaction-logs/
