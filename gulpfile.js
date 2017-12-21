@@ -37,7 +37,7 @@ gulp.task('inject', function () {
 
     try {
 
-        return gulp.src('./src/views/*.pug')
+        return gulp.src('./src/views/*.ejs')
             .pipe(wiredep(options))
             .pipe(inject(injectSrc, injectOptions))
             .pipe(gulp.dest('./src/views'));
