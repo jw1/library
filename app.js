@@ -1,6 +1,10 @@
 var express = require('express');
 var app = express();
 
+var bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded());
+
 var port = process.env.PORT || 5000;
 
 app.use(express.static('public'));
@@ -17,6 +21,12 @@ var nav = [
 
 var bookRouter = require('./src/routes/bookRoutes')(nav);
 app.use('/Books', bookRouter);
+
+var adminRouter = require('./src/routes/adminRoutes')(nav);
+app.use('/Admin', adminRouter);
+
+var authRouter = require('./src/routes/authRoutes')(nav);
+app.use('/Auth', authRouter);
 
 app.get('/', function (request, response) {
     response.render(
