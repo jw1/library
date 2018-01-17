@@ -7,12 +7,14 @@ var books = [
         title: 'Calculus, 8th Edition',
         genre: 'Educational',
         author: 'Stewart',
+        bookId: 61297,
         read: false
     },
     {
         title: 'Discrete Mathematics, 5th Edition',
         genre: 'Educational',
         author: 'Ross & Wright',
+        bookId: 984801,
         read: false
     },
     {
